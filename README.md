@@ -32,6 +32,7 @@ mka recoveryimage
 震动 ❌  
 解密Data ✅  
 MTP ✅  
+安装KernelSU(不支持SukiSU和KernelSU Next，需要的可修改vendorsetup.sh后自行构建) ✅  
 手电筒 ❌  
 WIFI ❌  
 
@@ -39,7 +40,7 @@ WIFI ❌
 
 后续会移除不需要的二进制，修BUG，增加新功能的
 ## 注意
-自行构建的OrangeFox不能直接刷入recovery分区(Release里的是处理好的)，需要使用仓库下的“移植vbmeta.py”脚本把原厂recovery的avb信息移植过去后再刷入  
+对于假回锁用户，自行构建的OrangeFox不能直接刷入recovery分区(Release里的是处理好的)，需要使用仓库下的“移植vbmeta.py”脚本把原厂recovery的avb信息移植过去后再刷入  
 ```bash
 python 移植vbmeta.py <原厂recovery.img> <被修补的镜像> <修补后的文件>
 ```
